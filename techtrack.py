@@ -67,10 +67,12 @@ for row in table_data:
     
     row.insert(2, website)
 
+# inserted headers into main data
+table_data.insert(0, header_info)
+
 # Create CSV file
 with open('techtracktutorial.csv', 'w') as writeFile:
     writer = csv.writer(writeFile)
-    writer.writerows(header_info)
     writer.writerows(table_data)
 
 writeFile.close()
